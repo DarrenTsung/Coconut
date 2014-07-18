@@ -71,10 +71,13 @@
     
     for (NUTEntity *entity in [self children])
     {
-        for (int i=0; i<componentsSize; i++)
-            if (![entity getComponent:[componentIdList objectAtIndex:i]]) continue;
+        bool matches = true;
         
-        [entityList addObject:entity];
+        for (int i=0; i<componentsSize; i++)
+            if (![entity getComponent:[componentIdList objectAtIndex:i]]) matches = false;
+        
+        if (matches)
+            [entityList addObject:entity];
     }
     
     return entityList;

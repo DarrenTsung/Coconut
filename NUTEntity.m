@@ -37,11 +37,7 @@
 
 - (NUTComponent *)getComponent:(NSString *)componentID
 {
-    NUTComponent *myComponent = [_componentList objectForKey:componentID];
-    
-    if (myComponent)
-        return myComponent;
-    return nil;
+    return [_componentList objectForKey:componentID];
 }
 
 - (void)attachComponent:(NUTComponent *)component

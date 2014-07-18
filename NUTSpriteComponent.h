@@ -13,8 +13,8 @@
 
 @interface NUTSpriteComponent : NUTComponent
 {
-    @public
-        CCSprite *sprite;
+@public
+    CCSprite *sprite;
 }
 
 - (id)initWithFilename:(NSString *)filename;
