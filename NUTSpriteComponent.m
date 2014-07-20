@@ -10,6 +10,17 @@
 
 @implementation NUTSpriteComponent
 
+- (id)init
+{
+    self = [super init];
+    if (!self) return nil;
+    
+    sprite = [CCSprite emptySprite];
+    [self addChild:sprite];
+    
+    return self;
+}
+
 - (id)initWithFilename:(NSString *)filename
 {
     self = [super init];
