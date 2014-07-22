@@ -33,11 +33,25 @@
 - (void)configureWithEntityM:(NUTEntityManager *)entitym andEventM:(NUTEventManger *)eventm
 {
     if (!entitym || !eventm)
-    { }   // LOG MISSING MANAGERS HERE
-        
-        
+    {
+        DDLogError(@"Error: Configuring SystemManager without properly initialized entity & event managers!");
+    }
+    
     _entitym = entitym;
     _eventm = eventm;
+}
+
+- (void)finishConfiguration
+{
+    if (!_eventm)
+    {
+        DDLogError(@"Error: Trying to finishConfiguration for systemsManager without calling configureWithEntityM:andEventM!");
+    }
+    
+    for (NUTSystem *system in [_systems allValues])
+    {
+        [system configureWithEventManager:_eventm];
+    }
 }
 
 - (void)updateSystem:(NSString *)systemID withDelta:(CCTime)delta

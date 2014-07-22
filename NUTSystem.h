@@ -19,6 +19,16 @@
 }
 
 /**
+ * All systems must override the [update:dt withEntityManager:entities andEventManger:events] method
+ */
+- (void)update:(CCTime)delta withEntityManager:(NUTEntityManager *)entities andEventManger:(NUTEventManger *)events;
+
+/**
+ * Register for events here
+ */
+- (void)configureWithEventManager:(NUTEventManger *)eventManager;
+
+/**
  * Returns the system ID belonging to this system
  *
  * @return System ID of this system
@@ -31,10 +41,5 @@
  * @return System ID for the class
  */
 + (NSString *)systemID;
-
-/**
- * All systems must override the [update:dt withEntityManager:entities andEventManger:events] method
- */
-- (void)update:(CCTime)delta withEntityManager:(NUTEntityManager *)entities andEventManger:(NUTEventManger *)events;
 
 @end

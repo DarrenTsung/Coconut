@@ -8,6 +8,16 @@
 
 #import "CCNode.h"
 
+@class NUTSystem;
+#import "NUTEvent.h"
+
 @interface NUTEventManger : CCNode
+{
+    
+}
+
+- (void)subscribeToEventType:(NSString *)eventID withCallback:(SEL)callback onDelegate:(NUTSystem *)delegate;
+
+- (void)emit:(NUTEvent *)event;
 
 @end

@@ -10,4 +10,14 @@
 
 @implementation NUTEvent
 
+- (NSString *)eventID;
+{
+    return NUT_EVENT_BASE_ID;
+}
+
++ (NSString *)eventID
+{
+    return NUT_EVENT_BASE_ID;
+}
+
 @end

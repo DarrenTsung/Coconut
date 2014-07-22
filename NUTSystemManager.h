@@ -31,4 +31,9 @@
  */
 - (void)configureWithEntityM:(NUTEntityManager *)entitym andEventM:(NUTEventManger *)eventm;
 
+/**
+ * Finish configuring the systems added to the systems manager
+ */
+- (void)finishConfiguration;
+
 @end

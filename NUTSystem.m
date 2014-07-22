@@ -18,6 +18,11 @@
     [super doesNotRecognizeSelector:_cmd];
 }
 
+- (void)configureWithEventManager:(NUTEventManger *)eventManager
+{
+    // override NUTSystem here if you want to receive events!
+}
+
 - (NSString *)systemID
 {
     return NUT_SYSTEM_BASE_ID;

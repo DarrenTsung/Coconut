@@ -8,6 +8,22 @@
 
 #import "CCNode.h"
 
+#define NUT_EVENT_BASE_ID               @"NUT::EVENT::BASE"
+
 @interface NUTEvent : CCNode
+
+/**
+ * Returns the event ID belonging to this event
+ *
+ * @return Event ID of this event
+ */
+- (NSString *)eventID;
+
+/**
+ * Returns the event ID associated with this class
+ *
+ * @return Event ID for the class
+ */
++ (NSString *)eventID;
 
 @end
