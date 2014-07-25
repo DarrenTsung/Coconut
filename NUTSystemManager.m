@@ -28,6 +28,7 @@
 - (void)add:(NUTSystem *)system
 {
     [_systems setObject:system forKey:[system systemID]];
+	[self addChild:system];
 }
 
 - (void)configureWithEntityM:(NUTEntityManager *)entitym andEventM:(NUTEventManger *)eventm
