@@ -72,12 +72,21 @@
     for (NUTEntity *entity in [self children])
     {
         bool matches = true;
+		
+		if (entity->disabled)
+		{
+			matches = false;
+		}
         
         for (int i=0; i<componentsSize; i++)
+		{
             if (![entity getComponent:[componentIdList objectAtIndex:i]]) matches = false;
+		}
         
         if (matches)
+		{
             [entityList addObject:entity];
+		}
     }
     
     return entityList;

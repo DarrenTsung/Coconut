@@ -16,6 +16,7 @@
     if (!self) return nil;
     
     sprite = [CCSprite emptySprite];
+	disabled = false;
     [self addChild:sprite];
     
     return self;
@@ -30,6 +31,16 @@
     [self addChild:sprite];
     
     return self;
+}
+
+- (void)disable
+{
+	[self removeChild:sprite];
+}
+
+- (void)enable
+{
+	[self addChild:sprite];
 }
 
 - (NSString *)componentID

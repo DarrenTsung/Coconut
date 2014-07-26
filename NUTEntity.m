@@ -21,6 +21,7 @@
     if (!self) return nil;
     
     _componentList = [NSMutableDictionary dictionary];
+	disabled = false;
     
     return self;
 }
@@ -33,6 +34,28 @@
 - (void)setId:(NSUInteger)newId
 {
     _id = newId;
+}
+
+- (void)enable
+{
+	disabled = false;
+	
+	NUTSpriteComponent *spriteComponent = (NUTSpriteComponent *)[self getComponent:NUT_COMPONENT_SPRITE_ID];
+	if (spriteComponent)
+	{
+		[spriteComponent enable];
+	}
+}
+
+- (void)disable
+{
+	disabled = true;
+	
+	NUTSpriteComponent *spriteComponent = (NUTSpriteComponent *)[self getComponent:NUT_COMPONENT_SPRITE_ID];
+	if (spriteComponent)
+	{
+		[spriteComponent disable];
+	}
 }
 
 - (NUTComponent *)getComponent:(NSString *)componentID

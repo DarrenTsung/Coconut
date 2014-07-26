@@ -14,6 +14,8 @@
  */
 @interface NUTEntity : CCNode
 {
+	@public
+	bool disabled;
 }
 
 /**
@@ -28,6 +30,15 @@
  */
 - (void)setId:(NSUInteger)newId;
 
+/**
+ * Disable this entity (will not be found in entitiesWithComponents).
+ */
+- (void)disable;
+
+/**
+ * Enable this entity
+ */
+- (void)enable;
 
 /**
  * Get a component belonging to this entity.

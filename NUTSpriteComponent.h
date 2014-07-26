@@ -15,7 +15,11 @@
 {
 @public
     CCSprite *sprite;
+	bool disabled;
 }
+
+- (void)disable;
+- (void)enable;
 
 - (id)initWithFilename:(NSString *)filename;
 
