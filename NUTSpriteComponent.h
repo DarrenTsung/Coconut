@@ -18,9 +18,6 @@
 	bool disabled;
 }
 
-- (void)disable;
-- (void)enable;
-
 - (id)initWithFilename:(NSString *)filename;
 
 @end

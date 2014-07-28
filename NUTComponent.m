@@ -10,6 +10,16 @@
 
 @implementation NUTComponent
 
+- (void)enable
+{
+	
+}
+
+- (void)disable
+{
+	
+}
+
 - (NSString *)componentID
 {
     return NUT_COMPONENT_BASE_ID;

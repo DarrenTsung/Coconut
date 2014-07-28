@@ -16,6 +16,10 @@
     
 }
 
+- (void)enable;
+
+- (void)disable;
+
 /**
  * Returns the component ID belonging to this component
  *

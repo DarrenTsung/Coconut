@@ -40,10 +40,10 @@
 {
 	disabled = false;
 	
-	NUTSpriteComponent *spriteComponent = (NUTSpriteComponent *)[self getComponent:NUT_COMPONENT_SPRITE_ID];
-	if (spriteComponent)
+	NSArray *children = [self children];
+	for (NUTComponent *child in children)
 	{
-		[spriteComponent enable];
+		[child enable];
 	}
 }
 
@@ -51,10 +51,10 @@
 {
 	disabled = true;
 	
-	NUTSpriteComponent *spriteComponent = (NUTSpriteComponent *)[self getComponent:NUT_COMPONENT_SPRITE_ID];
-	if (spriteComponent)
+	NSArray *children = [self children];
+	for (NUTComponent *child in children)
 	{
-		[spriteComponent disable];
+		[child disable];
 	}
 }
 
@@ -66,6 +66,7 @@
 - (void)attachComponent:(NUTComponent *)component
 {
     // if component is a special NUTSpriteComponent, add it as a child of this entity
+	// if you want to add another component as a child to the entity, you must do it manually (or edit this)
     if ([[component componentID] isEqualToString:NUT_COMPONENT_SPRITE_ID]) [self addChild:component];
     
     [_componentList setObject:component forKey:[component componentID]];
