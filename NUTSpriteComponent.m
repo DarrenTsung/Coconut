@@ -35,12 +35,18 @@
 
 - (void)disable
 {
-	[self removeChild:sprite];
+    if ([[self children] containsObject:sprite])
+    {
+    	[self removeChild:sprite];
+    }
 }
 
 - (void)enable
 {
-	[self addChild:sprite];
+    if (![[self children] containsObject:sprite])
+    {
+    	[self addChild:sprite];
+    }
 }
 
 - (NSString *)componentID

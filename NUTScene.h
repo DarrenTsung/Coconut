@@ -13,6 +13,7 @@
 
 @interface NUTScene : CCScene
 {
+    @public
     NUTEventManger *events;
     NUTEntityManager *entities;
     NUTSystemManager *systems;
