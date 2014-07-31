@@ -24,7 +24,7 @@
     return self;
 }
 
-- (void)subscribeToEventType:(NSString *)eventID withCallback:(SEL)callback onDelegate:(NUTSystem *)delegate
+- (void)subscribeToEventType:(NSString *)eventID withCallback:(SEL)callback onDelegate:(id)delegate
 {
     NSMutableArray *delegatesAndCallbacks = [_delegatesAndCallbacksForEvents objectForKey:eventID];
     
@@ -44,7 +44,7 @@
     NSArray *delegatesAndCallbacks = [_delegatesAndCallbacksForEvents objectForKey:eventID];
     for (NSArray *delegateAndCallback in delegatesAndCallbacks)
     {
-        NUTSystem *delegate = [delegateAndCallback objectAtIndex:0];
+        id delegate = [delegateAndCallback objectAtIndex:0];
         SEL callback = [[delegateAndCallback objectAtIndex:1] pointerValue];
         
         [delegate performSelector:callback withObject:event];

@@ -16,7 +16,7 @@
     
 }
 
-- (void)subscribeToEventType:(NSString *)eventID withCallback:(SEL)callback onDelegate:(NUTSystem *)delegate;
+- (void)subscribeToEventType:(NSString *)eventID withCallback:(SEL)callback onDelegate:(id)delegate;
 
 - (void)emit:(NUTEvent *)event;
 

@@ -92,4 +92,30 @@
     return entityList;
 }
 
+- (NSArray *)entitiesWithName:(NSString *)name
+{
+	NSMutableArray *entities = [NSMutableArray array];
+	
+	for (NUTEntity *entity in [self children])
+	{
+		if ([[entity name] isEqualToString:name])
+		{
+			[entities addObject:entity];
+		}
+	}
+	return entities;
+}
+
+- (NUTEntity *)entityWithName:(NSString *)name
+{
+	for (NUTEntity *entity in [self children])
+	{
+		if ([[entity name] isEqualToString:name])
+		{
+			return entity;
+		}
+	}
+	return nil;
+}
+
 @end

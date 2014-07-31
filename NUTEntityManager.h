@@ -30,4 +30,20 @@
 - (NSArray *)entitiesWithComponents:(NSString *)firstComponentID, ...
     NS_REQUIRES_NIL_TERMINATION;
 
+/**
+ * Returns all entities which have name equal to the name inputted. Name is a part of CCNode
+ *
+ * @param Name The name of the entity you are searching for
+ * @return An array of such entities
+ */
+- (NSArray *)entitiesWithName:(NSString *)name;
+
+/**
+ * Returns first entity which has a name equal to the name inputted.
+ *
+ * @param Name The name of the entity you are searching for
+ * @return The first entity matching the name specified
+ */
+- (NUTEntity *)entityWithName:(NSString *)name;
+
 @end
