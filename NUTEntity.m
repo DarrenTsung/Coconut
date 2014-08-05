@@ -63,6 +63,11 @@
     return [_componentList objectForKey:componentID];
 }
 
+- (void)removeComponent:(NSString *)componentID
+{
+    [_componentList removeObjectForKey:componentID];
+}
+
 - (void)attachComponent:(NUTComponent *)component
 {
     // if component is a special NUTSpriteComponent, add it as a child of this entity

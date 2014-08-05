@@ -49,6 +49,11 @@
 - (NUTComponent *)getComponent:(NSString *)componentID;
 
 /**
+ * Removes a component belonging to this entity.
+ */
+- (void)removeComponent:(NSString *)componentID;
+
+/**
  * Attach the component to this entity
  *
  * @param component Component to attach
