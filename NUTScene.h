@@ -7,14 +7,14 @@
 //
 
 #import "CCScene.h"
-#import "NUTEventManger.h"
+#import "NUTEventManager.h"
 #import "NUTEntityManager.h"
 #import "NUTSystemManager.h"
 
 @interface NUTScene : CCScene
 {
     @public
-    NUTEventManger *events;
+    NUTEventManager *events;
     NUTEntityManager *entities;
     NUTSystemManager *systems;
 }

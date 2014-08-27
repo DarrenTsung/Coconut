@@ -11,7 +11,7 @@
 @class NUTSystem;
 #import "NUTEvent.h"
 
-@interface NUTEventManger : CCNode
+@interface NUTEventManager : CCNode
 {
     
 }

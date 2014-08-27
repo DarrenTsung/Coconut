@@ -12,7 +12,7 @@
 {
     NSMutableDictionary *_systems;
     NUTEntityManager *_entitym;
-    NUTEventManger *_eventm;
+    NUTEventManager *_eventm;
 }
 
 - (id)init
@@ -31,7 +31,7 @@
 	[self addChild:system];
 }
 
-- (void)configureWithEntityM:(NUTEntityManager *)entitym andEventM:(NUTEventManger *)eventm
+- (void)configureWithEntityM:(NUTEntityManager *)entitym andEventM:(NUTEventManager *)eventm
 {
     if (!entitym || !eventm)
     {

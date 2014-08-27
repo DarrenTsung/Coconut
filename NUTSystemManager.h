@@ -29,7 +29,7 @@
 /**
  * Store references to event manager and entity manager
  */
-- (void)configureWithEntityM:(NUTEntityManager *)entitym andEventM:(NUTEventManger *)eventm;
+- (void)configureWithEntityM:(NUTEntityManager *)entitym andEventM:(NUTEventManager *)eventm;
 
 /**
  * Finish configuring the systems added to the systems manager

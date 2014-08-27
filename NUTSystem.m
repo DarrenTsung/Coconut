@@ -13,12 +13,12 @@
     
 }
 
-- (void)update:(CCTime)delta withEntityManager:(NUTEntityManager *)entities andEventManger:(NUTEventManger *)events
+- (void)update:(CCTime)delta withEntityManager:(NUTEntityManager *)entities andEventManger:(NUTEventManager *)events
 {
     [super doesNotRecognizeSelector:_cmd];
 }
 
-- (void)configureWithEventManager:(NUTEventManger *)eventManager
+- (void)configureWithEventManager:(NUTEventManager *)eventManager
 {
     // override NUTSystem here if you want to receive events!
 }

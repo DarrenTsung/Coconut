@@ -8,7 +8,7 @@
 
 #import "CCNode.h"
 #import "NUTEntityManager.h"
-#import "NUTEventManger.h"
+#import "NUTEventManager.h"
 
 // create a new system ID when you subclass this class
 #define NUT_SYSTEM_BASE_ID          @"NUT::SYSTEM::BASE"
@@ -21,12 +21,12 @@
 /**
  * All systems must override the [update:dt withEntityManager:entities andEventManger:events] method
  */
-- (void)update:(CCTime)delta withEntityManager:(NUTEntityManager *)entities andEventManger:(NUTEventManger *)events;
+- (void)update:(CCTime)delta withEntityManager:(NUTEntityManager *)entities andEventManger:(NUTEventManager *)events;
 
 /**
  * Register for events here
  */
-- (void)configureWithEventManager:(NUTEventManger *)eventManager;
+- (void)configureWithEventManager:(NUTEventManager *)eventManager;
 
 /**
  * Returns the system ID belonging to this system

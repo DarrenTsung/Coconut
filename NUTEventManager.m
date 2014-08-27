@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 Lamdawoof. All rights reserved.
 //
 
-#import "NUTEventManger.h"
+#import "NUTEventManager.h"
 #import "NUTSystem.h"
 
-@implementation NUTEventManger
+@implementation NUTEventManager
 {
     NSMutableDictionary *_delegatesAndCallbacksForEvents;
 }

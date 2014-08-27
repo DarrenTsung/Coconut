@@ -18,7 +18,7 @@
     systems = [[NUTSystemManager alloc] init];
     [self addChild:systems];
     
-    events = [[NUTEventManger alloc] init];
+    events = [[NUTEventManager alloc] init];
     [self addChild:events];
     
     entities = [[NUTEntityManager alloc] init];
